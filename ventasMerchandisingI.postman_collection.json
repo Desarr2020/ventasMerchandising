@@ -1,0 +1,443 @@
+{
+	"info": {
+		"_postman_id": "4df19f03-2bb6-4f59-a8db-1f600d87e762",
+		"name": "Ecomerce API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Alta de un usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "Dar de baja apor el id del   usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar usuario por id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar todos los usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/usuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CONSULTA (OBTENER TODOS LOS USUARIOS DE LA CIUDAD DE RESISTENCIA)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/usuarios/Contenga/Resistencia",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"Contenga",
+								"Resistencia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar todos los usarios que fueron creados luego de una fecha dada",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/usuarios?fechaDeCreacion=2021-01-06",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios"
+							],
+							"query": [
+								{
+									"key": "fechaDeCreacion",
+									"value": "2021-01-06"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Productos",
+			"item": [
+				{
+					"name": "Alta de productos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nombre\": \"pintura\",\r\n        \"descripcion\": \"Cinta de enmascarar\",\r\n        \"precioUnitario\": 300,\r\n        \"codigoInventario\": \"04\",\r\n        \"categorias\": \"4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/productos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Baja un productos por su id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar un producto por medio de su id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar todos los productos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/productos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar porducto por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/productos/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"productos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Traer todos los productos no publicado(False)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/productos/NoPublicado?False",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"productos",
+								"NoPublicado"
+							],
+							"query": [
+								{
+									"key": "False",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Traer todos los productos publicado(True)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/producto/NoPublicado?False",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"producto",
+								"NoPublicado"
+							],
+							"query": [
+								{
+									"key": "False",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Traer todos los productos que contenga una palabra dada en el nombre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/productos/Contenga/Par",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"productos",
+								"Contenga",
+								"Par"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Carritos",
+			"item": [
+				{
+					"name": "Buscar todos los carritos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/carritos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carritos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar los carritos por un ID determinado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/usuarios/2/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar Carrito",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/usuario/6/carrito/6",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"6",
+								"carrito",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrar carrito",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "Checkout(cerrar) carrito activo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/carrito/2/close",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carrito",
+								"2",
+								"close"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Detalles",
+			"item": [
+				{
+					"name": "Consultar todas las lineas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/carritos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carritos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar carrito por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ordenes",
+			"item": [
+				{
+					"name": "Consutar todas las ordenes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/Orden",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Orden"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reservas",
+			"item": [
+				{
+					"name": "reservas por id de usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
